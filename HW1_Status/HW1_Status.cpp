@@ -161,9 +161,17 @@ void activateSkill(int skillType, int& MP)
             break;
         }
     case 1:
-        MP /= 2;
-        cout << "* 스킬을 사용하여 MP가 50% 소모되었습니다." << endl;
-        break;
+        if (MP < 2)
+        {
+            cout << "마나가 부족합니다." << endl;
+            return;
+        }
+        else 
+        {
+            MP /= 2;
+            cout << "* 스킬을 사용하여 MP가 50% 소모되었습니다." << endl;
+            break;
+        }
     default:
         cout << "* 잘못된 스킬 타입 입니다." << endl;
         return;
