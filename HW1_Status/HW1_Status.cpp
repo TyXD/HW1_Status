@@ -152,7 +152,7 @@ void activateSkill(int skillType, int& MP)
         if (MP < 50)
         {
             cout << "마나가 부족합니다." << endl;
-            return;
+            break;
         }
         else
         {
@@ -164,7 +164,7 @@ void activateSkill(int skillType, int& MP)
         if (MP < 2)
         {
             cout << "마나가 부족합니다." << endl;
-            return;
+            break;
         }
         else 
         {
